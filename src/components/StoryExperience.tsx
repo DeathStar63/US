@@ -115,14 +115,14 @@ function SceneBody({ scene }: { scene: Scene }) {
       {scene.heading && (
         <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-serif text-[26px] leading-snug text-[#4A3A35]">
+          className="font-serif text-[28px] leading-snug text-[#4A3A35]">
           {scene.heading}
         </motion.h1>
       )}
       {scene.body?.map((para, i) => (
         <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.35 + i * 0.4 }}
-          className="mt-4 text-[15px] leading-relaxed text-[#6B5852]">
+          className="mt-4 text-[17px] leading-relaxed text-[#6B5852]">
           {para}
         </motion.p>
       ))}
@@ -153,11 +153,11 @@ function ChoiceView({ prompt, options, onPicked }: { prompt: string; options: Ch
   const [picked, setPicked] = useState<number | null>(null);
   return (
     <div className="flex flex-col items-center gap-3">
-      <p className="text-[13px] text-[#A98F88]">{prompt}</p>
+      <p className="text-[15px] text-[#A98F88]">{prompt}</p>
       <div className="flex w-full flex-col gap-2.5">
         {options.map((opt, i) => (
           <button key={i} onClick={() => { setPicked(i); onPicked(); }}
-            className="rounded-2xl border px-4 py-3 text-[15px] font-medium transition active:scale-[0.98]"
+            className="rounded-2xl border px-4 py-3 text-[17px] font-medium transition active:scale-[0.98]"
             style={{ borderColor: picked === i ? "#D98B9B" : "#EBD8D2", background: picked === i ? "#FBEAEC" : "#FFFFFF", color: picked === i ? "#C06B7C" : "#6B5852" }}>
             {opt.label}
           </button>
@@ -166,7 +166,7 @@ function ChoiceView({ prompt, options, onPicked }: { prompt: string; options: Ch
       <AnimatePresence>
         {picked !== null && (
           <motion.p initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }}
-            className="mt-1 text-center text-[14px] italic text-[#C06B7C]">
+            className="mt-1 text-center text-[16px] italic text-[#C06B7C]">
             {options[picked].response}
           </motion.p>
         )}
@@ -197,12 +197,12 @@ function InputView({ prompt, placeholder, storageKey, onTyped }: {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <p className="text-[13px] text-[#A98F88]">{prompt}</p>
+      <p className="text-[15px] text-[#A98F88]">{prompt}</p>
       <textarea value={value} onChange={(e) => handleChange(e.target.value)} onBlur={handleSave}
         placeholder={placeholder} rows={3}
-        className="w-full resize-none rounded-2xl border border-[#EBD8D2] bg-white px-4 py-3 text-[15px] leading-relaxed text-[#5A4A44] outline-none transition placeholder:text-[#C9B5AF] focus:border-[#D98B9B]" />
+        className="w-full resize-none rounded-2xl border border-[#EBD8D2] bg-white px-4 py-3 text-[17px] leading-relaxed text-[#5A4A44] outline-none transition placeholder:text-[#C9B5AF] focus:border-[#D98B9B]" />
       <button onClick={handleSave} disabled={!value.trim()}
-        className="text-[13px] font-medium text-[#C06B7C] transition disabled:opacity-40">
+        className="text-[15px] font-medium text-[#C06B7C] transition disabled:opacity-40">
         {saved ? "Saved ✓" : "Save this"}
       </button>
     </div>
@@ -226,7 +226,7 @@ function RevealView({ label, hidden, onRevealed, onAdvance }: {
         ) : (
           <motion.div key="open" initial={{ opacity: 0, y: 10, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-[#F0D5D0] bg-[#FFF6F4] px-5 py-5 text-center text-[15px] italic leading-relaxed text-[#7A5F58]">
+            className="rounded-2xl border border-[#F0D5D0] bg-[#FFF6F4] px-5 py-5 text-center text-[17px] italic leading-relaxed text-[#7A5F58]">
             {hidden}
           </motion.div>
         )}
@@ -267,7 +267,7 @@ function FinaleView({ signoff }: { signoff?: string }) {
               className="flex h-24 w-32 items-center justify-center rounded-2xl bg-white shadow-[0_10px_30px_rgba(200,140,130,0.25)]">
               <Heart className="h-9 w-9 fill-[#E8A0AE] text-[#E8A0AE]" />
             </motion.div>
-            <span className="text-[13px] font-medium tracking-wide text-[#C06B7C]">Tap to open</span>
+            <span className="text-[15px] font-medium tracking-wide text-[#C06B7C]">Tap to open</span>
           </motion.button>
         ) : (
           <motion.div key="opened" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -275,13 +275,13 @@ function FinaleView({ signoff }: { signoff?: string }) {
             {answers.length > 0 && (
               <div className="w-full space-y-2.5">
                 {answers.map((a) => (
-                  <div key={a.key} className="rounded-2xl border border-[#F0D5D0] bg-[#FFF6F4] px-4 py-3 text-center text-[14px] italic leading-relaxed text-[#7A5F58]">
+                  <div key={a.key} className="rounded-2xl border border-[#F0D5D0] bg-[#FFF6F4] px-4 py-3 text-center text-[16px] italic leading-relaxed text-[#7A5F58]">
                     &ldquo;{a.value}&rdquo;
                   </div>
                 ))}
               </div>
             )}
-            {signoff && <p className="font-serif text-[18px] text-[#C06B7C]">{signoff}</p>}
+            {signoff && <p className="font-serif text-[20px] text-[#C06B7C]">{signoff}</p>}
           </motion.div>
         )}
       </AnimatePresence>

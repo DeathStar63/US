@@ -91,10 +91,10 @@ export default function PinGate({
         </motion.div>
 
         <div className="text-center">
-          <h1 className="font-serif text-[26px] text-[#4A3A35]">
+          <h1 className="font-serif text-[28px] text-[#4A3A35]">
             enter our code
           </h1>
-          <p className="mt-2 text-[14px] text-[#A98F88]">
+          <p className="mt-2 text-[16px] text-[#A98F88]">
             6 digits, just for you
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function PinGate({
               onChange={(e) => handleChange(i, e.target.value)}
               onKeyDown={(e) => handleKey(i, e)}
               onFocus={(e) => e.target.select()}
-              className="h-14 w-11 rounded-2xl border text-center text-[22px] font-semibold outline-none transition-all duration-200 caret-transparent"
+              className="h-14 w-11 rounded-2xl border text-center text-[24px] font-semibold outline-none transition-all duration-200 caret-transparent"
               style={{
                 borderColor: d ? "#D98B9B" : "#EBD8D2",
                 background: d ? "#FBEAEC" : "#fff",
@@ -132,7 +132,7 @@ export default function PinGate({
               initial={{ opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="text-[13px] text-[#C06B7C]"
+              className="text-[15px] text-[#C06B7C]"
             >
               try again
             </motion.p>
