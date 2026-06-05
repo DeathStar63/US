@@ -10,7 +10,7 @@ export const STORY_CONFIG = {
   yourName: "Me",
   // The 6-digit PIN she'll enter to unlock the experience.
   // Change this to something meaningful (e.g. the date you met: "140622").
-  pin: "000000",
+  pin: "251221",
   // Optional ambient music. Drop an mp3 into /public/ and set the path,
   // e.g. "/song.mp3". Leave as null to hide the music toggle entirely.
   musicSrc: null as string | null,
