@@ -5,9 +5,9 @@
 
 export const STORY_CONFIG = {
   // Her name — used in greetings.
-  herName: "Love",
+  herName: "Ada",
   // Your name — shown in the closing signature.
-  yourName: "Me",
+  yourName: "Ayush",
   // The 6-digit PIN she'll enter to unlock the experience.
   // Change this to something meaningful (e.g. the date you met: "140622").
   pin: "251221",
