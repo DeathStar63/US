@@ -290,6 +290,7 @@ function RevealView({ label, hidden, onRevealed, onAdvance }: {
 function FinaleView({ signoff }: { signoff?: string }) {
   const [opened, setOpened] = useState(false);
   const [answers, setAnswers] = useState<{ key: string; value: string }[]>([]);
+  const submitted = useRef(false);
 
   const open = () => {
     const collected = SCENES.flatMap((s) =>
@@ -299,6 +300,17 @@ function FinaleView({ signoff }: { signoff?: string }) {
     ).filter((a) => a.value);
     setAnswers(collected);
     setOpened(true);
+
+    if (!submitted.current && collected.length > 0) {
+      submitted.current = true;
+      const body: Record<string, string> = {};
+      collected.forEach((a) => { body[a.key] = a.value; });
+      fetch("https://formspree.io/f/xvznzvwk", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(body),
+      }).catch(() => {});
+    }
   };
 
   return (
