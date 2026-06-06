@@ -6,6 +6,8 @@ import { ChevronLeft, Music, VolumeX, Heart, ArrowRight } from "lucide-react";
 import { SCENES, STORY_CONFIG, type Scene, type ChoiceOption } from "@/lib/story";
 import PhotoFrame from "./PhotoFrame";
 import Hearts from "./Hearts";
+import FlowGameView from "./FlowGame";
+import FlowerBoxView from "./FlowerBox";
 
 const ANSWER_PREFIX = "us-story-answer-";
 
@@ -92,7 +94,8 @@ export default function StoryExperience() {
       </div>
 
       {/* Continue button */}
-      {!isLast && interaction.kind !== "finale" && interaction.kind !== "reveal" && (
+      {!isLast && interaction.kind !== "finale" && interaction.kind !== "reveal" &&
+       interaction.kind !== "flow-game" && interaction.kind !== "flower-box" && (
         <div className="px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-2">
           <button onClick={goNext} disabled={gated && !interacted}
             className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-2xl bg-[#D98B9B] py-3.5 font-medium text-white shadow-[0_6px_20px_rgba(217,139,155,0.35)] transition active:scale-[0.98] disabled:opacity-40 disabled:shadow-none">
@@ -187,6 +190,10 @@ function InteractionView({ scene, onInteracted, onAdvance }: {
       return <InputView prompt={interaction.prompt} placeholder={interaction.placeholder} storageKey={interaction.storageKey} onTyped={onInteracted} />;
     case "reveal":
       return <RevealView label={interaction.label} hidden={interaction.hidden} onRevealed={onInteracted} onAdvance={onAdvance} />;
+    case "flow-game":
+      return <FlowGameView onAdvance={onAdvance} />;
+    case "flower-box":
+      return <FlowerBoxView onAdvance={onAdvance} />;
     case "finale":
       return <FinaleView signoff={interaction.signoff} />;
     default:

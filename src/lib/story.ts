@@ -23,6 +23,8 @@ export type Interaction =
   | { kind: "choice"; prompt: string; options: ChoiceOption[] }
   | { kind: "input"; prompt: string; placeholder?: string; storageKey: string }
   | { kind: "reveal"; label: string; hidden: string }
+  | { kind: "flow-game" }
+  | { kind: "flower-box" }
   | { kind: "finale"; signoff?: string };
 
 export interface ChoiceOption {
@@ -123,6 +125,18 @@ export const SCENES: Scene[] = [
       "But I believe this time would be different. With real, kept boundaries — not ones we quietly cross out of love — you could have yourself, and still have us.",
     ],
     interaction: { kind: "continue", label: "I'm still here" },
+  },
+  {
+    id: "flow-game",
+    heading: "Take a little break.",
+    body: ["You've been reading a lot. This one's just for fun — I know you love it."],
+    interaction: { kind: "flow-game" },
+  },
+  {
+    id: "flower-box",
+    heading: "And something for you.",
+    body: ["Open it."],
+    interaction: { kind: "flower-box" },
   },
   {
     id: "pune",
