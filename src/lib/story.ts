@@ -59,8 +59,10 @@ export const SCENES: Scene[] = [
     id: "what-this-is",
     heading: "Before we begin —",
     body: [
-      "What this is: a letter I've been sitting with for a while. An honest conversation I didn't know how to start. Something that came from love, not frustration.",
-      "What this is not: a breakup. A list of things you did wrong. Something you need to fix right now.",
+      "What this is:",
+      "A way for me to know you more — really understand you, not just assume I do. A warm, safe space for you to share whatever's been on your mind. Something to help us focus on right now, not every fear about the future. Us figuring this out together, not separately. A way for me to learn how to respect your space and your boundaries better.",
+      "What this is not:",
+      "A breakup. A list of things you did wrong. Something you need to fix right now.",
       "Just read it with an open heart. That's all I'm asking.",
     ],
     interaction: { kind: "continue", label: "Okay" },
