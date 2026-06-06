@@ -57,8 +57,9 @@ export default function StoryExperience() {
       {/* Top bar */}
       <div className="flex items-center gap-3 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-2">
         <button onClick={goBack} disabled={index === 0} aria-label="Back"
-          className="flex h-8 w-8 items-center justify-center rounded-full text-[#C99BA0] transition disabled:opacity-0">
-          <ChevronLeft className="h-5 w-5" strokeWidth={2} />
+          className="flex items-center gap-0.5 rounded-full px-2 py-1 text-[13px] font-medium text-[#C99BA0] transition active:scale-95 disabled:opacity-0">
+          <ChevronLeft className="h-4 w-4" strokeWidth={2.5} />
+          Back
         </button>
         <div className="flex flex-1 items-center gap-1.5">
           {SCENES.map((s, i) => (
