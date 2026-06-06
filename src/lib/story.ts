@@ -131,9 +131,9 @@ export const SCENES: Scene[] = [
     heading: "Okay but also —",
     body: ["Look at these cats. Just because."],
     gifs: [
-      "https://media.giphy.com/media/ii7ywI1dVzYcg/giphy.gif",
-      "https://media.giphy.com/media/l0HlwsNyl6kTOhpIY/giphy.gif",
-      "https://media.giphy.com/media/Ig8K6XMdrVCzrclJIL/giphy.gif",
+      "sP0SLcBdcPYqKKnfaY",
+      "hqOK8hrsesdphkNkcJ",
+      "xjQBgPt47ri0AwiktC",
     ],
     interaction: { kind: "continue", label: "Okay I'm better now" },
   },
