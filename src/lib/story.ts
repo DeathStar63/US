@@ -61,14 +61,14 @@ export const SCENES: Scene[] = [
     heading: "Before we begin —",
     body: [
       "What this is:",
+      "__GIF_0__",
       "A way for me to truly know you — to understand you, not just assume I do. A warm, safe space for you to say whatever's been sitting on your heart. Something to help us stay right here, in the present, not spiraling into every what-if.",
       "A way for me to hold your space better — so you can take time for yourself without feeling guilty for it. A way for us to find our balance: feeling whole on our own, and coming to each other because we want to, not because we have to.",
       "A way to heal — gently, slowly, with each other beside us. Taking things as they come, one at a time.",
-      "__GIF_0__",
       "What this is not:",
+      "__GIF_1__",
       "Me asking more of you. Me asking for your time or energy right now. A self-sabotage. Us pushing each other away. A reason to make any big decisions today. Something to blame yourself — or us — for.",
       "A sign that something between us is broken. Me loving you any less. Something to carry alone. Something to be afraid of. The beginning of an ending.",
-      "__GIF_1__",
       "Just read it with an open heart. That's all.",
     ],
     gifs: [
