@@ -116,7 +116,7 @@ function SceneBody({ scene }: { scene: Scene }) {
       {scene.heading && (
         <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-serif text-[26px] md:text-[36px] leading-snug text-[#4A3A35]">
+          className="font-serif text-[26px] leading-snug text-[#4A3A35]">
           {scene.heading}
         </motion.h1>
       )}
@@ -144,7 +144,7 @@ function SceneBody({ scene }: { scene: Scene }) {
         return (
           <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 + i * 0.4 }}
-            className={`mt-4 text-[15px] md:text-[17px] leading-relaxed text-[#4A3A35] ${isLabel ? "font-semibold tracking-wide" : "font-normal text-[#6B5852]"}`}>
+            className={`mt-4 text-[15px] leading-relaxed text-[#4A3A35] ${isLabel ? "font-semibold tracking-wide" : "font-normal text-[#6B5852]"}`}>
             {para}
           </motion.p>
         );
