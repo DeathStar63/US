@@ -108,6 +108,16 @@ export const SCENES: Scene[] = [
     interaction: { kind: "continue", label: "I remember" },
   },
   {
+    id: "fuller",
+    heading: "And that's what made it so beautiful.",
+    body: [
+      "We were full without each other at first — and then when you entered my life, and I yours, you made it even more fun, more full. We had things to do by ourselves, and then on top of that we had each other. Quality time that we genuinely enjoyed. Not a replacement — a lovely add on.",
+      "But with time, people change. Things change. Bonds change. We shouldn't be stuck with the old ways — we should keep altering things with how we feel in that moment.",
+      "Right now I know you feel lost. So I would love for us to give you more time for yourself.",
+    ],
+    interaction: { kind: "continue", label: "Keep going" },
+  },
+  {
     id: "me",
     image: "/photos/placeholder-2.jpg",
     imageAlt: "Me, being honest",
