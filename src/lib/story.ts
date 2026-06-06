@@ -72,8 +72,8 @@ export const SCENES: Scene[] = [
       "Just read it with an open heart. That's all.",
     ],
     gifs: [
-      "https://media4.giphy.com/media/k84qZt3FhtWZLKZ5k1/giphy.gif",
-      "https://media1.giphy.com/media/nR4L10XlJcSeQ/giphy.gif",
+      "k84qZt3FhtWZLKZ5k1",
+      "nR4L10XlJcSeQ",
     ],
     interaction: { kind: "continue", label: "Okay" },
   },
