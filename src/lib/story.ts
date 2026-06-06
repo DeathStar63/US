@@ -87,16 +87,45 @@ export const SCENES: Scene[] = [
     interaction: { kind: "continue", label: "Keep going" },
   },
   {
-    id: "boundaries-truth",
-    heading: "You once said something I can't forget.",
+    id: “boundaries-truth”,
+    heading: “You once said something I can’t forget.”,
     body: [
-      '“I don’t know who I am without you.”',
-      "And it's true — I think for both of us. We never really set boundaries. And the few we did set, we crossed them anyway, out of love, telling ourselves it was okay.",
+      ‘”I don’t know who I am without you.”’,
+      “And it’s true — I think for both of us. We never really set boundaries. And the few we did set, we crossed them anyway, out of love, telling ourselves it was okay.”,
     ],
-    interaction: { kind: "continue", label: "Continue" },
+    interaction: { kind: “continue”, label: “Continue” },
   },
   {
-    id: "pune",
+    id: “dehradun”,
+    heading: “I hope Dehradun gave you what you needed.”,
+    body: [
+      “I hope you felt alive there. That you breathed easier, laughed without any weight on you — and remembered what it feels like to just be you.”,
+      “And if you want more of that — more time, more space, more trips like that — I want you to have it. Even now that you’re back. That space doesn’t have to end here. I’m ready to give it after too.”,
+    ],
+    interaction: { kind: “continue”, label: “Keep going” },
+  },
+  {
+    id: “acknowledge”,
+    heading: “I want to acknowledge what you’ve been feeling.”,
+    body: [
+      “You want to learn how to be happy alone first. That’s not just valid — it’s important, and I’m glad you’re honest enough with yourself to say it.”,
+      “You feel like I love you so much, and you can’t give it back the same way right now. That’s okay. You don’t have to. I’m not keeping score.”,
+      “You need time — and this doesn’t have to be a hard, final decision. Take all of it. If you want more time alone before we even slowly start talking again, that’s okay too. I know you’ve already thought about all of this. I just want you to hear that I’ve heard it.”,
+    ],
+    interaction: { kind: “continue”, label: “There’s more” },
+  },
+  {
+    id: “clear-space”,
+    heading: “About not reaching out during your trip —“,
+    body: [
+      “I understand. With me even just in a text, you’d end up thinking about us. We’d find our way back to each other, and you’d lose yourself in it again — loop back, and feel lost all over again.”,
+      “So yes — you needed that clean, clear space. It makes complete sense.”,
+      “But I believe this time would be different. With real, kept boundaries — not ones we quietly cross out of love — you could have yourself, and still have us.”,
+    ],
+    interaction: { kind: “continue”, label: “I’m still here” },
+  },
+  {
+    id: “pune”,
     image: "/photos/placeholder-1.jpg",
     imageAlt: "Us, back in Pune",
     heading: "Remember Pune, in the beginning?",
@@ -158,10 +187,21 @@ export const SCENES: Scene[] = [
     heading: "So here's what I'd love us to try.",
     body: [
       "Our own lives first — your friends, your studies, the things that are only yours. Mine too: I'll work on building a life here that isn't just us.",
-      "Then, at the end of the day, we come back to each other — not out of habit or fear of being alone, but because we want to.",
-      "And we get to say 'I need a little space' without it ever meaning something is wrong.",
+      "Then real, set time together — when we both actually feel like it. Not every day if that's too much. Even once a week, if that's what feels right. Dedicated time we both look forward to, not time we fall into out of routine.",
+      "I want to ask you — what do you want to do for yourself? What would you want to do with me? You tell me your boundaries. I'll keep them.",
+      "And we get to say 'I need space' without it ever meaning something is wrong.",
     ],
     interaction: { kind: "continue", label: "I like that" },
+  },
+  {
+    id: "planning",
+    heading: "\"Tab ki tab sochenge\" — let's leave that behind.",
+    body: [
+      "We've always winged it. Told ourselves we'd figure it out when we got there. Sometimes it was beautiful. But sometimes it wasn't — and the parts where it wasn't, we both got hurt quietly.",
+      "I'd love for us to actually plan things. Set boundaries we genuinely keep. Know what to expect from each other — not as a rule, but as a way of caring better.",
+      "I know I haven't always met your expectations. I want to change that. Planning with our happiness first, feeling content first — not winging it and hoping things don't take wrong turns. That's what I want for us.",
+    ],
+    interaction: { kind: "continue", label: "Me too" },
   },
   {
     id: "input-need",
