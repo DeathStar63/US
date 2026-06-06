@@ -84,7 +84,7 @@ export default function StoryExperience() {
             exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.4, ease: "easeOut" }}
             className="flex flex-1 flex-col items-center justify-center px-6 py-6">
             <SceneBody scene={scene} />
-            <div className="mt-7 w-full max-w-sm md:max-w-lg">
+            <div className="mt-7 w-full max-w-sm md:max-w-2xl">
               <InteractionView scene={scene} onInteracted={() => setInteracted(true)} onAdvance={goNext} />
             </div>
           </motion.div>
@@ -95,7 +95,7 @@ export default function StoryExperience() {
       {!isLast && interaction.kind !== "finale" && interaction.kind !== "reveal" && (
         <div className="px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-2">
           <button onClick={goNext} disabled={gated && !interacted}
-            className="mx-auto flex w-full max-w-sm md:max-w-lg items-center justify-center gap-2 rounded-2xl bg-[#D98B9B] py-3.5 font-medium text-white shadow-[0_6px_20px_rgba(217,139,155,0.35)] transition active:scale-[0.98] disabled:opacity-40 disabled:shadow-none">
+            className="mx-auto flex w-full max-w-sm md:max-w-2xl items-center justify-center gap-2 rounded-2xl bg-[#D98B9B] py-3.5 font-medium text-white shadow-[0_6px_20px_rgba(217,139,155,0.35)] transition active:scale-[0.98] disabled:opacity-40 disabled:shadow-none">
             {interaction.kind === "continue" && interaction.label ? interaction.label : "Continue"}
             <ArrowRight className="h-4 w-4" strokeWidth={2.2} />
           </button>
@@ -107,7 +107,7 @@ export default function StoryExperience() {
 
 function SceneBody({ scene }: { scene: Scene }) {
   return (
-    <div className="flex w-full max-w-sm md:max-w-lg flex-col items-center text-center">
+    <div className="flex w-full max-w-sm md:max-w-2xl flex-col items-center text-center">
       {scene.image && (
         <div className="mb-6 w-full">
           <PhotoFrame src={scene.image} alt={scene.imageAlt} />
@@ -116,7 +116,7 @@ function SceneBody({ scene }: { scene: Scene }) {
       {scene.heading && (
         <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-serif text-[26px] leading-snug text-[#4A3A35]">
+          className="font-serif text-[26px] md:text-[36px] leading-snug text-[#4A3A35]">
           {scene.heading}
         </motion.h1>
       )}
@@ -144,7 +144,7 @@ function SceneBody({ scene }: { scene: Scene }) {
         return (
           <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 + i * 0.4 }}
-            className={`mt-4 text-[15px] leading-relaxed text-[#4A3A35] ${isLabel ? "font-semibold tracking-wide" : "font-normal text-[#6B5852]"}`}>
+            className={`mt-4 text-[15px] md:text-[17px] leading-relaxed text-[#4A3A35] ${isLabel ? "font-semibold tracking-wide" : "font-normal text-[#6B5852]"}`}>
             {para}
           </motion.p>
         );
