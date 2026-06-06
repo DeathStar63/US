@@ -127,7 +127,25 @@ function SceneBody({ scene }: { scene: Scene }) {
           {para}
         </motion.p>
       ))}
+      {scene.gifs && <GifGrid gifs={scene.gifs} />}
     </div>
+  );
+}
+
+function GifGrid({ gifs }: { gifs: string[] }) {
+  return (
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="mt-5 grid w-full grid-cols-2 gap-2.5">
+      {gifs.map((src, i) => (
+        <motion.div key={i} initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, delay: 0.6 + i * 0.15 }}
+          className={`overflow-hidden rounded-2xl shadow-sm${gifs.length % 2 !== 0 && i === gifs.length - 1 ? " col-span-2" : ""}`}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={src} alt="funny cat" className="h-full w-full object-cover" loading="lazy" />
+        </motion.div>
+      ))}
+    </motion.div>
   );
 }
 

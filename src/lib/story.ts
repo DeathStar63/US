@@ -38,6 +38,7 @@ export interface Scene {
   body?: string[];
   interaction?: Interaction;
   surprise?: "hearts" | "none";
+  gifs?: string[];
 }
 
 // ── The story ────────────────────────────────────────────────────────────────
@@ -124,6 +125,17 @@ export const SCENES: Scene[] = [
       hidden:
         "I don't want you to shrink to be loved by me — and I don't want to lean my whole world on you either. I want us both whole on our own, and then together.",
     },
+  },
+  {
+    id: "cats",
+    heading: "Okay but also —",
+    body: ["Look at these cats. Just because."],
+    gifs: [
+      "https://media.giphy.com/media/ii7ywI1dVzYcg/giphy.gif",
+      "https://media.giphy.com/media/l0HlwsNyl6kTOhpIY/giphy.gif",
+      "https://media.giphy.com/media/Ig8K6XMdrVCzrclJIL/giphy.gif",
+    ],
+    interaction: { kind: "continue", label: "Okay I'm better now" },
   },
   {
     id: "boundaries",
