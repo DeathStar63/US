@@ -128,7 +128,7 @@ function SceneBody({ scene }: { scene: Scene }) {
             return (
               <motion.div key={i} initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.35 + i * 0.4 }}
-                className="mt-5 relative w-full overflow-hidden rounded-2xl shadow-sm" style={{ paddingBottom: "56.25%" }}>
+                className="mt-5 relative w-[30%] overflow-hidden rounded-2xl shadow-sm" style={{ paddingBottom: "30%" }}>
                 <iframe
                   src={`https://giphy.com/embed/${gifSrc}`}
                   className="absolute inset-0 h-full w-full"
