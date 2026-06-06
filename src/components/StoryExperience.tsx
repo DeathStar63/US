@@ -131,7 +131,8 @@ function SceneBody({ scene }: { scene: Scene }) {
                 className="mt-5 relative w-[30%] overflow-hidden rounded-2xl shadow-sm" style={{ paddingBottom: "30%" }}>
                 <iframe
                   src={`https://giphy.com/embed/${gifSrc}`}
-                  className="absolute inset-0 h-full w-full"
+                  className="absolute h-full w-full"
+                  style={{ inset: "-10%", width: "120%", height: "120%" }}
                   frameBorder="0"
                   allowFullScreen
                 />
