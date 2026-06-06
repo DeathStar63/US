@@ -120,14 +120,29 @@ function SceneBody({ scene }: { scene: Scene }) {
           {scene.heading}
         </motion.h1>
       )}
-      {scene.body?.map((para, i) => (
-        <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.35 + i * 0.4 }}
-          className="mt-4 text-[15px] leading-relaxed text-[#6B5852]">
-          {para}
-        </motion.p>
-      ))}
-      {scene.gifs && <GifGrid gifs={scene.gifs} />}
+      {scene.body?.map((para, i) => {
+        const gifMatch = para.match(/^__GIF_(\d+)__$/);
+        if (gifMatch && scene.gifs) {
+          const gifSrc = scene.gifs[Number(gifMatch[1])];
+          if (gifSrc) {
+            return (
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.35 + i * 0.4 }}
+                className="mt-5 relative w-full overflow-hidden rounded-2xl shadow-sm" style={{ paddingBottom: "56.25%" }}>
+                <img src={gifSrc} alt="" className="absolute inset-0 h-full w-full object-cover" />
+              </motion.div>
+            );
+          }
+        }
+        return (
+          <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 + i * 0.4 }}
+            className="mt-4 text-[15px] leading-relaxed text-[#6B5852]">
+            {para}
+          </motion.p>
+        );
+      })}
+      {scene.gifs && !scene.body?.some(p => /^__GIF_\d+__$/.test(p)) && <GifGrid gifs={scene.gifs} />}
     </div>
   );
 }
