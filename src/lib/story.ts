@@ -36,6 +36,8 @@ export interface Scene {
   id: string;
   image?: string;
   imageAlt?: string;
+  video?: string;
+  videoPoster?: string;
   heading?: string;
   body?: string[];
   interaction?: Interaction;
@@ -140,7 +142,8 @@ export const SCENES: Scene[] = [
   },
   {
     id: "pune",
-    image: "/photos/placeholder-1.jpg",
+    video: "/videos/pune.mp4",
+    videoPoster: "/videos/pune-poster.jpg",
     imageAlt: "Us, back in Pune",
     heading: "Remember Pune, in the beginning?",
     body: [
@@ -162,7 +165,8 @@ export const SCENES: Scene[] = [
   },
   {
     id: "me",
-    image: "/photos/placeholder-2.jpg",
+    video: "/videos/me.mp4",
+    videoPoster: "/videos/me-poster.jpg",
     imageAlt: "Me, being honest",
     heading: "And I have to be honest about me too.",
     body: [
@@ -232,7 +236,8 @@ export const SCENES: Scene[] = [
   },
   {
     id: "input-you",
-    image: "/photos/placeholder-3.jpg",
+    video: "/videos/you.mp4",
+    videoPoster: "/videos/you-poster.jpg",
     imageAlt: "You, being completely you",
     heading: "And one more.",
     body: [

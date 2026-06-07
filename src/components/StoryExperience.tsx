@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, Music, VolumeX, Heart, ArrowRight } from "lucide-react";
 import { SCENES, STORY_CONFIG, type Scene, type ChoiceOption } from "@/lib/story";
 import PhotoFrame from "./PhotoFrame";
+import VideoFrame from "./VideoFrame";
 import Hearts from "./Hearts";
 import FlowGameView from "./FlowGame";
 import FlowerBoxView from "./FlowerBox";
@@ -111,7 +112,12 @@ export default function StoryExperience() {
 function SceneBody({ scene }: { scene: Scene }) {
   return (
     <div className="flex w-full max-w-sm flex-col items-center text-center">
-      {scene.image && (
+      {scene.video && (
+        <div className="mb-6 w-full">
+          <VideoFrame src={scene.video} poster={scene.videoPoster} alt={scene.imageAlt} />
+        </div>
+      )}
+      {!scene.video && scene.image && (
         <div className="mb-6 w-full">
           <PhotoFrame src={scene.image} alt={scene.imageAlt} />
         </div>
