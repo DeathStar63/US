@@ -191,7 +191,7 @@ function InteractionView({ scene, onInteracted, onAdvance }: {
   if (!interaction) return null;
   switch (interaction.kind) {
     case "choice":
-      return <ChoiceView prompt={interaction.prompt} options={interaction.options} onPicked={onInteracted} />;
+      return <ChoiceView prompt={interaction.prompt} options={interaction.options} storageKey={interaction.storageKey} onPicked={onInteracted} />;
     case "input":
       return <InputView prompt={interaction.prompt} placeholder={interaction.placeholder} storageKey={interaction.storageKey} onTyped={onInteracted} />;
     case "reveal":
@@ -207,14 +207,21 @@ function InteractionView({ scene, onInteracted, onAdvance }: {
   }
 }
 
-function ChoiceView({ prompt, options, onPicked }: { prompt: string; options: ChoiceOption[]; onPicked: () => void }) {
+function ChoiceView({ prompt, options, storageKey, onPicked }: { prompt: string; options: ChoiceOption[]; storageKey?: string; onPicked: () => void }) {
   const [picked, setPicked] = useState<number | null>(null);
+
+  const handlePick = (i: number) => {
+    setPicked(i);
+    if (storageKey) saveAnswer(storageKey, options[i].label);
+    onPicked();
+  };
+
   return (
     <div className="flex flex-col items-center gap-3">
       <p className="text-[13px] text-[#A98F88]">{prompt}</p>
       <div className="flex w-full flex-col gap-2.5">
         {options.map((opt, i) => (
-          <button key={i} onClick={() => { setPicked(i); onPicked(); }}
+          <button key={i} onClick={() => handlePick(i)}
             className="rounded-2xl border px-4 py-3 text-[15px] font-medium transition active:scale-[0.98]"
             style={{ borderColor: picked === i ? "#D98B9B" : "#EBD8D2", background: picked === i ? "#FBEAEC" : "#FFFFFF", color: picked === i ? "#C06B7C" : "#6B5852" }}>
             {opt.label}
@@ -306,11 +313,13 @@ function FinaleView({ signoff }: { signoff?: string }) {
   const submitted = useRef(false);
 
   const open = () => {
-    const collected = SCENES.flatMap((s) =>
-      s.interaction?.kind === "input"
-        ? [{ key: s.interaction.storageKey, value: loadAnswer(s.interaction.storageKey) }]
-        : []
-    ).filter((a) => a.value);
+    const collected = SCENES.flatMap((s) => {
+      if (s.interaction?.kind === "input")
+        return [{ key: s.interaction.storageKey, value: loadAnswer(s.interaction.storageKey) }];
+      if (s.interaction?.kind === "choice" && s.interaction.storageKey)
+        return [{ key: s.interaction.storageKey, value: loadAnswer(s.interaction.storageKey) }];
+      return [];
+    }).filter((a) => a.value);
     setAnswers(collected);
     setOpened(true);
 

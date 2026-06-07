@@ -20,7 +20,7 @@ export const STORY_CONFIG = {
 
 export type Interaction =
   | { kind: "continue"; label?: string }
-  | { kind: "choice"; prompt: string; options: ChoiceOption[] }
+  | { kind: "choice"; prompt: string; options: ChoiceOption[]; storageKey?: string }
   | { kind: "input"; prompt: string; placeholder?: string; storageKey: string }
   | { kind: "reveal"; label: string; hidden: string }
   | { kind: "flow-game" }
@@ -259,10 +259,11 @@ export const SCENES: Scene[] = [
     interaction: {
       kind: "choice",
       prompt: "However you feel is okay.",
+      storageKey: "answer",
       options: [
-        { label: "Yes, let's try", response: "That means everything. Thank you." },
-        { label: "I need to think", response: "Take all the time you want. I'm not going anywhere." },
-        { label: "Let's talk first", response: "Yes. Whenever you're ready, I'm here." },
+        { label: "I would like to try but I need space first.", response: "Take all the space you need. I'll be here." },
+        { label: "I need time to think about it.", response: "Take all the time you want. I'm not going anywhere." },
+        { label: "Let's talk first.", response: "Yes. Whenever you're ready, I'm here." },
       ],
     },
   },
