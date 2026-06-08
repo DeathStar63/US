@@ -8,15 +8,18 @@ export default function VideoFrame({
   src,
   poster,
   alt,
+  volume,
 }: {
   src: string;
   poster?: string;
   alt?: string;
+  volume?: number;
 }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [errored, setErrored] = useState(false);
   const isPlaceholder = src.includes("placeholder");
   const showFallback = isPlaceholder || errored;
+  const muted = volume === undefined || volume === 0;
 
   return (
     <motion.div
@@ -39,9 +42,14 @@ export default function VideoFrame({
             src={src}
             poster={poster}
             autoPlay
-            muted
+            muted={muted}
             loop
             playsInline
+            onLoadedMetadata={() => {
+              if (videoRef.current && volume !== undefined) {
+                videoRef.current.volume = volume;
+              }
+            }}
             onError={() => setErrored(true)}
             className="h-full w-full object-cover"
           />

@@ -114,7 +114,7 @@ function SceneBody({ scene }: { scene: Scene }) {
     <div className="flex w-full max-w-sm flex-col items-center text-center">
       {scene.video && (
         <div className="mb-6 w-full">
-          <VideoFrame src={scene.video} poster={scene.videoPoster} alt={scene.imageAlt} />
+          <VideoFrame src={scene.video} poster={scene.videoPoster} alt={scene.imageAlt} volume={scene.videoVolume} />
         </div>
       )}
       {!scene.video && scene.image && (

@@ -38,6 +38,7 @@ export interface Scene {
   imageAlt?: string;
   video?: string;
   videoPoster?: string;
+  videoVolume?: number;
   heading?: string;
   body?: string[];
   interaction?: Interaction;
@@ -222,6 +223,8 @@ export const SCENES: Scene[] = [
   },
   {
     id: "cats",
+    video: "/videos/cat-funny.mp4",
+    videoVolume: 0.4,
     heading: "Okay but also —",
     body: ["Look at these funny cats. I hope they make you smile and your heart a little lighter."],
     gifUrls: [
