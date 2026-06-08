@@ -178,6 +178,20 @@ export const SCENES: Scene[] = [
     interaction: { kind: "continue", label: "Keep going" },
   },
   {
+    id: "happy",
+    heading: "And honestly — I haven't been happy.",
+    body: [
+      "That's strange for me to say, because I'm an optimistic person at heart. I genuinely believe life is supposed to be full and bright. I love people. I love meeting them, talking to them, making them laugh.",
+      "But lately I've lost the confidence to do any of that. To walk up to someone new. To make a friend. To just be in a room and feel like myself. I don't know exactly when that happened.",
+      "I'm also afraid of losing you. You're the best thing that's happened to me — and I think that fear has made me hold on tighter than I should. In trying not to lose you, I've been slowly losing myself.",
+      "After work, you've become my only reason to feel something good. I know that isn't fair to you. And it isn't fair to me either.",
+      "I want to feel better — genuinely, from the inside. Because I believe that when I'm happy, the people around me feel it too. Especially you. I want to bring you joy, not ask you for it.",
+      "I love you more than I can put into words. I've always waited for you — and I always will. But I don't want to keep waiting at the cost of disappearing from myself.",
+      "I want us to be happy together. But I think we need to be happy on our own first.",
+    ],
+    interaction: { kind: "continue", label: "I hear you" },
+  },
+  {
     id: "reveal-note",
     heading: "So here's what I really want you to know.",
     body: ["Tap to read it."],
