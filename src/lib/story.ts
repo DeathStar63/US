@@ -221,7 +221,7 @@ export const SCENES: Scene[] = [
   {
     id: "cats",
     heading: "Okay but also —",
-    body: ["Look at these cats. Just because."],
+    body: ["Look at these funny cats. I hope they make you smile and your heart a little lighter."],
     gifs: [
       "sP0SLcBdcPYqKKnfaY",
       "hqOK8hrsesdphkNkcJ",
