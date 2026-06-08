@@ -224,9 +224,9 @@ export const SCENES: Scene[] = [
     heading: "Okay but also —",
     body: ["Look at these funny cats. I hope they make you smile and your heart a little lighter."],
     gifUrls: [
-      "https://media.giphy.com/media/uyfgCPQeCjYMVxt2m3/giphy.gif",
-      "https://media.giphy.com/media/125E8v90blHqtr4HrB/giphy.gif",
-      "https://media.giphy.com/media/v3Rb7dGuvkmaRi6qei/giphy.gif",
+      "https://media.giphy.com/media/uyfgCPQeCjYMVxt2m3/giphy.mp4",
+      "https://media.giphy.com/media/125E8v90blHqtr4HrB/giphy.mp4",
+      "https://media.giphy.com/media/v3Rb7dGuvkmaRi6qei/giphy.mp4",
     ],
     interaction: { kind: "continue", label: "Okay I'm better now" },
   },

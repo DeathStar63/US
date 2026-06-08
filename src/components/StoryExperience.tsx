@@ -191,7 +191,8 @@ function GifImgGrid({ urls }: { urls: string[] }) {
       transition={{ duration: 0.5, delay: 0.5 }}
       className="mt-5 flex w-full flex-col gap-3">
       {urls.map((url, i) => (
-        <motion.img key={i} src={url} alt="" loading="lazy"
+        <motion.video key={i} src={url}
+          autoPlay muted loop playsInline
           initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.6 + i * 0.2 }}
           className="w-full rounded-2xl shadow-sm"
