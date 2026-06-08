@@ -42,7 +42,8 @@ export interface Scene {
   body?: string[];
   interaction?: Interaction;
   surprise?: "hearts" | "none";
-  gifs?: string[];
+  gifs?: string[];       // Giphy IDs → rendered as iframes
+  gifUrls?: string[];    // direct image URLs → rendered as <img> tags (faster)
 }
 
 // ── The story ────────────────────────────────────────────────────────────────
@@ -222,10 +223,10 @@ export const SCENES: Scene[] = [
     id: "cats",
     heading: "Okay but also —",
     body: ["Look at these funny cats. I hope they make you smile and your heart a little lighter."],
-    gifs: [
-      "sP0SLcBdcPYqKKnfaY",
-      "hqOK8hrsesdphkNkcJ",
-      "xjQBgPt47ri0AwiktC",
+    gifUrls: [
+      "https://media.giphy.com/media/uyfgCPQeCjYMVxt2m3/giphy.gif",
+      "https://media.giphy.com/media/125E8v90blHqtr4HrB/giphy.gif",
+      "https://media.giphy.com/media/v3Rb7dGuvkmaRi6qei/giphy.gif",
     ],
     interaction: { kind: "continue", label: "Okay I'm better now" },
   },
