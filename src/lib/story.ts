@@ -204,6 +204,7 @@ export const SCENES: Scene[] = [
       "You are the reason I am who I am today. Your habits became mine. The things you love, I found myself loving too. The way I talk, the things I notice, the small parts of how I move through the world — so much of it has you in it.",
       "Some things I learned from you. Some things we built together. Some things we just quietly took from each other without even realising. You've become a part of me — a part of who I am.",
       "And we are different people. Different upbringings, different minds, different ways of seeing things. But that's exactly what keeps pulling me in. I always want to know more about you. Every difference gives me a new reason to respect you — and another reason to love you.",
+      "And honestly — I am afraid of losing you. Because losing you feels like I'm losing a part of myself…",
     ],
     interaction: { kind: "continue", label: "Keep going" },
   },
