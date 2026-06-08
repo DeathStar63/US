@@ -192,6 +192,18 @@ export const SCENES: Scene[] = [
     interaction: { kind: "continue", label: "I hear you" },
   },
   {
+    id: "bumble",
+    heading: "You texted me first, you know.",
+    body: [
+      "On Bumble. You said you liked my smile.",
+      "I was new to Pune then — living alone in a flat, didn't know anyone, still figuring out what this city even was. I had no one there.",
+      "And then you showed up. You became the reason I had something to smile about. You gave me a 'someone' when I had none. You made Pune beautiful — a city I was starting to feel lost in suddenly had a reason to feel like home.",
+      "You made me feel like I wasn't alone.",
+      "I miss that smile too, Ada. The one you noticed first. I want to find it again — not just for you, but for me.",
+    ],
+    interaction: { kind: "continue", label: "Keep going" },
+  },
+  {
     id: "reveal-note",
     heading: "So here's what I really want you to know.",
     body: ["Tap to read it."],
