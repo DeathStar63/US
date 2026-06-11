@@ -286,12 +286,8 @@ export default function FlowGameView({ onAdvance }: { onAdvance: () => void }) {
         </svg>
       </div>
 
-      <button onClick={onAdvance}
-        className="text-[12px] text-[#C9B5AF] underline underline-offset-2 transition hover:text-[#A98F88]">
-        skip
-      </button>
 
-      <AnimatePresence>
+<AnimatePresence>
         {isWon && (
           <motion.p key="msg" initial={{opacity:0,y:6}} animate={{opacity:1,y:0}}
             className="text-[14px] font-medium text-[#C06B7C]">

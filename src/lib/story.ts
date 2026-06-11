@@ -261,9 +261,8 @@ export const SCENES: Scene[] = [
     id: "ask",
     heading: "So — gently —",
     body: [
-      "This isn't a relationship. Maybe it's far from it right now — and that's completely okay.",
-      "If you're content with your life right now, that's good. I don't want to change that. I'm just saying — if you ever wanted something simpler, something slow and light with no expectations — I'm here for that. Just you being more yourself, and me not getting in the way of it.",
-      "Can we try this, together? No pressure, no grand promises. Just a little more space, and a lot more honesty.",
+      "This isn't a relationship. It doesn't have to be anything.",
+      "Just something slow and light, if you want it. On your terms.",
     ],
     interaction: {
       kind: "choice",
@@ -273,7 +272,7 @@ export const SCENES: Scene[] = [
         { label: "I would like to try but I need space first.", response: "Take all the space you need. I'll be here." },
         { label: "I need time to think about it.", response: "Take all the time you want. I'm not going anywhere." },
         { label: "Let's talk first.", response: "Yes. Whenever you're ready, I'm here." },
-        { label: "I just need space right now.", response: "That's okay. No pressure, no timeline. I'm here." },
+        { label: "Right now, I just need my space.", response: "That's okay. No pressure, no timeline. I'm here." },
       ],
     },
   },
