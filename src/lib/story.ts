@@ -144,8 +144,7 @@ export const SCENES: Scene[] = [
   },
   {
     id: "pune",
-    video: "/videos/pune.mp4",
-    videoPoster: "/videos/pune-poster.jpg",
+    image: "/photos/pune.jpg",
     imageAlt: "Us, back in Pune",
     heading: "Remember Pune, in the beginning?",
     body: [
