@@ -126,7 +126,6 @@ export const SCENES: Scene[] = [
     body: [
       "I understand. With me even just in a text, you'd end up thinking about us. We'd find our way back to each other, and you'd lose yourself in it again — loop back, and feel lost all over again.",
       "So yes — you needed that clean, clear space. It makes complete sense.",
-      "But I believe this time would be different. With real, kept boundaries — not ones we quietly cross out of love — you could have yourself, and still have us.",
     ],
     interaction: { kind: "continue", label: "I'm still here" },
   },
@@ -160,7 +159,6 @@ export const SCENES: Scene[] = [
     body: [
       "We were full without each other at first — and then when you entered my life, and I yours, you made it even more fun, more full. We had things to do by ourselves, and then on top of that we had each other. Quality time that we genuinely enjoyed. Not a replacement — a lovely add on.",
       "But with time, people change. Things change. Bonds change. We shouldn't be stuck with the old ways — we should keep altering things with how we feel in that moment.",
-      "Right now I know you feel lost. So I would love for us to give you more time for yourself.",
     ],
     interaction: { kind: "continue", label: "Keep going" },
   },
@@ -203,7 +201,6 @@ export const SCENES: Scene[] = [
       "You are the reason I am who I am today. Your habits became mine. The things you love, I found myself loving too. The way I talk, the things I notice, the small parts of how I move through the world — so much of it has you in it.",
       "Some things I learned from you. Some things we built together. Some things we just quietly took from each other without even realising. You've become a part of me — a part of who I am.",
       "And we are different people. Different upbringings, different minds, different ways of seeing things. But that's exactly what keeps pulling me in. I always want to know more about you. Every difference gives me a new reason to respect you — and another reason to love you.",
-      "And honestly — I am afraid of losing you. Because losing you feels like I'm losing a part of myself…",
     ],
     interaction: { kind: "continue", label: "Keep going" },
   },
@@ -231,27 +228,6 @@ export const SCENES: Scene[] = [
       "https://media.giphy.com/media/v3Rb7dGuvkmaRi6qei/giphy.mp4",
     ],
     interaction: { kind: "continue", label: "Okay I'm better now" },
-  },
-  {
-    id: "boundaries",
-    heading: "So here's what I'd love us to try.",
-    body: [
-      "Our own lives first — your friends, your studies, the things that are only yours. Mine too: I'll work on building a life here that isn't just us.",
-      "Then real, set time together — when we both actually feel like it. Not every day if that's too much. Even once a week, if that's what feels right. Dedicated time we both look forward to, not time we fall into out of routine.",
-      "I want to ask you — what do you want to do for yourself? What would you want to do with me? You tell me your boundaries. I'll keep them.",
-      "And we get to say 'I need space' without it ever meaning something is wrong.",
-    ],
-    interaction: { kind: "continue", label: "I like that" },
-  },
-  {
-    id: "planning",
-    heading: "\"Tab ki tab sochenge\" — let's leave that behind.",
-    body: [
-      "We've always winged it. Told ourselves we'd figure it out when we got there. Sometimes it was beautiful. But sometimes it wasn't — and the parts where it wasn't, we both got hurt quietly.",
-      "I'd love for us to actually plan things. Set boundaries we genuinely keep. Know what to expect from each other — not as a rule, but as a way of caring better.",
-      "I know I haven't always met your expectations. I want to change that. Planning with our happiness first, feeling content first — not winging it and hoping things don't take wrong turns. That's what I want for us.",
-    ],
-    interaction: { kind: "continue", label: "Me too" },
   },
   {
     id: "input-need",
