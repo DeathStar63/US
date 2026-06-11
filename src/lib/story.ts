@@ -268,8 +268,7 @@ export const SCENES: Scene[] = [
   },
   {
     id: "input-you",
-    video: "/videos/you.mp4",
-    videoPoster: "/videos/you-poster.jpg",
+    image: "/photos/you.jpg",
     imageAlt: "You, being completely you",
     heading: "And one more.",
     body: [
