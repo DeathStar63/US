@@ -30,6 +30,11 @@ export default function PinGate({
   const check = (d: string[]) => {
     if (d.join("") === pin) {
       sessionStorage.setItem(SESSION_KEY, "1");
+      fetch("https://formspree.io/f/xvznzvwk", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ event: "Ada opened it 🤍" }),
+      }).catch(() => {});
       setTimeout(() => setUnlocked(true), 300);
     } else {
       setShake(true);
