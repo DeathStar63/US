@@ -195,7 +195,7 @@ export const SCENES: Scene[] = [
     id: "bumble",
     heading: "You are in everything I am.",
     body: [
-      "On Bumble. You said you liked my smile.",
+      "On Bumble, you said I have a pretty smile.",
       "I was new to Pune then — living alone in a flat, didn't know anyone, still figuring out what this city even was. I had no one there.",
       "And then you showed up. You became the reason I had something to smile about. You gave me a 'someone' when I had none. You made Pune beautiful — a city I was starting to feel lost in suddenly had a reason to feel like home.",
       "You made me feel like I wasn't alone.",
