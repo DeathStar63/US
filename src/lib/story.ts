@@ -166,8 +166,7 @@ export const SCENES: Scene[] = [
   },
   {
     id: "me",
-    video: "/videos/me.mp4",
-    videoPoster: "/videos/me-poster.jpg",
+    image: "/photos/me.jpg",
     imageAlt: "Me, being honest",
     heading: "And I have to be honest about me too.",
     body: [
