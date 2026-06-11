@@ -261,8 +261,10 @@ export const SCENES: Scene[] = [
     id: "ask",
     heading: "So — gently —",
     body: [
-      "This isn't a relationship. It doesn't have to be anything.",
-      "Just something slow and light, if you want it. On your terms.",
+      "This isn't a relationship. This is far from it — and that's okay.",
+      "I know you need space right now. We wouldn't be spending every day together. Just something small to look forward to — something fun, once a week maybe, around your schedule.",
+      "If you're content with your life right now, that's good. I don't want to change that. I'm just saying — if you ever wanted something simpler, something slow and light with no expectations — I'm here for that. Just you being more yourself, and me not getting in the way of it.",
+      "Can we try this, together? No pressure, no grand promises. Just a little more space, and a lot more honesty.",
     ],
     interaction: {
       kind: "choice",
