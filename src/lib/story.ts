@@ -295,6 +295,7 @@ export const SCENES: Scene[] = [
         { label: "I would like to try but I need space first.", response: "Take all the space you need. I'll be here." },
         { label: "I need time to think about it.", response: "Take all the time you want. I'm not going anywhere." },
         { label: "Let's talk first.", response: "Yes. Whenever you're ready, I'm here." },
+        { label: "I just need space right now.", response: "That's okay. No pressure, no timeline. I'm here." },
       ],
     },
   },
