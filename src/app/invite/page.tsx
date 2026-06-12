@@ -23,7 +23,7 @@ const ACTIVITIES = [
 
 const HIS_EMAIL = "ayushjodh@gmail.com";
 const HER_EMAIL = "adasharma0308@gmail.com";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvznvonl";
 
 export default function InvitePage() {
   const [selected, setSelected] = useState<string[]>([]);
