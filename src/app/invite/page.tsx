@@ -5,9 +5,9 @@ import { useState } from "react";
 const ACTIVITIES = [
   { id: "roblox",      emoji: "🎮", label: "Play Roblox" },
   { id: "euphoria",    emoji: "📺", label: "Watch Euphoria" },
-  { id: "her-series",  emoji: "🍿", label: "Watch what you're watching rn" },
+  { id: "her-series",  emoji: "🍿", label: "Watch your current series together" },
   { id: "imessage",    emoji: "📱", label: "iMessage games" },
-  { id: "dehradun",    emoji: "🏔️", label: "Hear about Dehradun" },
+  { id: "dehradun",    emoji: "🏔️", label: "Share how the trip to Dehradun went!" },
   { id: "movie",       emoji: "🎬", label: "Watch a movie" },
   { id: "charades",    emoji: "🎭", label: "Play Charades" },
   { id: "paint",       emoji: "🎨", label: "Paint together online" },
