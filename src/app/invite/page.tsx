@@ -27,6 +27,7 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/mvznvonl";
 
 export default function InvitePage() {
   const [selected, setSelected] = useState<string[]>([]);
+  const [custom, setCustom]     = useState("");
   const [date, setDate]         = useState("");
   const [time, setTime]         = useState("");
   const [sent, setSent]         = useState(false);
@@ -51,6 +52,8 @@ export default function InvitePage() {
     const end   = fmt(year, month, day, (hour + 1) % 24, minute);
 
     const labels = selectedActivities.map(a => `${a.emoji} ${a.label}`);
+    if (custom.trim()) labels.push(`✨ ${custom.trim()}`);
+
     const title  =
       labels.length === 1
         ? `Us — ${labels[0]}`
@@ -74,6 +77,7 @@ export default function InvitePage() {
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         activities: labels.join(", "),
+        custom: custom.trim() || "—",
         date,
         time,
       }),
@@ -82,7 +86,7 @@ export default function InvitePage() {
     setSent(true);
   };
 
-  const ready = selected.length > 0 && date && time;
+  const ready = (selected.length > 0 || custom.trim()) && date && time;
   const today = new Date().toISOString().split("T")[0];
 
   return (
@@ -122,6 +126,18 @@ export default function InvitePage() {
             {a.emoji} {a.label}
           </button>
         ))}
+      </div>
+
+      {/* Custom activity input */}
+      <div className="flex flex-col gap-2">
+        <p className="text-xs text-rose-300 text-center">or something else on your mind?</p>
+        <input
+          type="text"
+          value={custom}
+          onChange={e => setCustom(e.target.value)}
+          placeholder="something else I'd like to do…"
+          className="w-full rounded-full border border-rose-100 px-4 py-3 text-rose-800 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 placeholder:text-rose-200"
+        />
       </div>
 
       {/* Date + time picker — appears after at least one bubble is chosen */}
