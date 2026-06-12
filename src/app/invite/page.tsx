@@ -64,7 +64,6 @@ export default function InvitePage() {
       details,
     });
     params.append("add", HIS_EMAIL);
-    params.append("add", HER_EMAIL);
 
     window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, "_blank");
     setSent(true);
