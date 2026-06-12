@@ -84,8 +84,14 @@ export default function InvitePage() {
           Something to look forward to.
         </h1>
         <p className="text-sm text-rose-400 leading-relaxed mt-1 max-w-xs mx-auto">
-          Pick something that sounds nice. No pressure — just something small and fun,
-          whenever it fits around your day.
+          I know you need your space right now. If you would like, we could spend time
+          together whenever you feel like it or are ready for it — around your schedule.
+          No pressure, open heart.
+        </p>
+        <p className="text-sm text-rose-400 leading-relaxed max-w-xs mx-auto">
+          Choose whatever you&apos;d like to do from these, select the date and time of your
+          preference and I will be there ❤️ A little something so we have something to
+          look forward to — so that your space doesn&apos;t get disturbed.
         </p>
       </div>
 
