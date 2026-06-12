@@ -64,6 +64,7 @@ export default function InvitePage() {
       details,
     });
     params.append("add", HIS_EMAIL);
+    params.append("add", HER_EMAIL);
 
     window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, "_blank");
     setSent(true);
@@ -73,7 +74,8 @@ export default function InvitePage() {
   const today = new Date().toISOString().split("T")[0];
 
   return (
-    <main className="mx-auto max-w-md min-h-screen px-5 py-14 flex flex-col gap-10">
+    <main className="fixed inset-0 overflow-y-auto bg-pink-50">
+      <div className="mx-auto max-w-md px-5 py-14 flex flex-col gap-10">
 
       {/* Header */}
       <div className="text-center flex flex-col gap-2">
@@ -141,6 +143,7 @@ export default function InvitePage() {
         </div>
       )}
 
+      </div>
     </main>
   );
 }
