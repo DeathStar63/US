@@ -23,6 +23,7 @@ const ACTIVITIES = [
 
 const HIS_EMAIL = "ayushjodh@gmail.com";
 const HER_EMAIL = "adasharma0308@gmail.com";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function InvitePage() {
   const [selected, setSelected] = useState<string[]>([]);
@@ -67,6 +68,17 @@ export default function InvitePage() {
     params.append("add", HER_EMAIL);
 
     window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, "_blank");
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        activities: labels.join(", "),
+        date,
+        time,
+      }),
+    });
+
     setSent(true);
   };
 
