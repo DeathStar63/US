@@ -263,7 +263,6 @@ export const SCENES: Scene[] = [
     body: [
       "This isn't a relationship. This is far from it — and that's okay.",
       "I know you need space right now. We wouldn't be spending every day together — not even close. But maybe once a week, whenever it fits around your day, we do something small and fun. Not just to spend time, but something we'd both actually look forward to.",
-      "Like — tell me about your Dehradun trip. The real version, every little detail. Or we each read the same book and then do a proper review together, the way you'd actually want to talk about it. Or we open Google Maps, drop a random pin somewhere in the world, and just explore from wherever we are. Or we put on Brooklyn 99. Or we play 'We're Not Really Strangers' — I think that one would really suit us.",
       "If you're content with your life right now, that's good. I don't want to change that. I'm just saying — if you ever wanted something simpler, something slow and light with no expectations — I'm here for that. Just you being more yourself, and me not getting in the way of it.",
       "Can we try this, together? No pressure, no grand promises. Just a little more space, and a lot more honesty.",
     ],
