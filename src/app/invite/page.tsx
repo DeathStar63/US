@@ -3,24 +3,27 @@
 import { useState } from "react";
 
 const ACTIVITIES = [
-  { id: "roblox",      emoji: "🎮", label: "Play Roblox" },
-  { id: "euphoria",    emoji: "📺", label: "Watch Euphoria" },
-  { id: "her-series",  emoji: "🍿", label: "Watch your current series together" },
-  { id: "imessage",    emoji: "📱", label: "iMessage games" },
-  { id: "dehradun",    emoji: "🏔️", label: "Talk about your trip to Dehradun!" },
-  { id: "movie",       emoji: "🎬", label: "Watch a movie" },
-  { id: "charades",    emoji: "🎭", label: "Play Charades" },
-  { id: "paint",       emoji: "🎨", label: "Paint together online" },
-  { id: "jigsaw",      emoji: "🧩", label: "Jigsaw puzzle" },
-  { id: "skribbl",     emoji: "✏️",  label: "Skribbl.io" },
-  { id: "discord",     emoji: "🕹️", label: "Discord games" },
-  { id: "reels",       emoji: "🎞️", label: "Watch Reels / YT Shorts" },
-  { id: "geoguessr",   emoji: "🌍", label: "GeoGuessr" },
-  { id: "book",        emoji: "📖", label: "Read a book and do a book review together" },
-  { id: "youtube",     emoji: "▶️",  label: "Future Canoe / Muffin Juice" },
-  { id: "gmaps",       emoji: "🗺️", label: "Explore the world on Google Maps" },
-  { id: "brooklyn99",  emoji: "👮", label: "Watch Brooklyn 99" },
+  // meaningful & connection-building
   { id: "wnrs",        emoji: "🃏", label: "Play We're Not Really Strangers" },
+  { id: "dehradun",    emoji: "🏔️", label: "Talk about your trip to Dehradun!" },
+  { id: "book",        emoji: "📖", label: "Read a book and do a book review together" },
+  { id: "gmaps",       emoji: "🗺️", label: "Explore the world on Google Maps" },
+  { id: "paint",       emoji: "🎨", label: "Paint together online" },
+  // watch together
+  { id: "movie",       emoji: "🎬", label: "Watch a movie" },
+  { id: "euphoria",    emoji: "📺", label: "Watch Euphoria" },
+  { id: "brooklyn99",  emoji: "👮", label: "Watch Brooklyn 99" },
+  { id: "her-series",  emoji: "🍿", label: "Watch your current series together" },
+  { id: "youtube",     emoji: "▶️",  label: "Future Canoe / Muffin Juice" },
+  { id: "reels",       emoji: "🎞️", label: "Watch Reels / YT Shorts" },
+  // games
+  { id: "charades",    emoji: "🎭", label: "Play Charades" },
+  { id: "geoguessr",   emoji: "🌍", label: "GeoGuessr" },
+  { id: "skribbl",     emoji: "✏️",  label: "Skribbl.io" },
+  { id: "jigsaw",      emoji: "🧩", label: "Jigsaw puzzle" },
+  { id: "roblox",      emoji: "🎮", label: "Play Roblox" },
+  { id: "discord",     emoji: "🕹️", label: "Discord games" },
+  { id: "imessage",    emoji: "📱", label: "iMessage games" },
 ];
 
 const HIS_EMAIL = "ayushjodh@gmail.com";
