@@ -7,7 +7,7 @@ const ACTIVITIES = [
   { id: "euphoria",    emoji: "📺", label: "Watch Euphoria" },
   { id: "her-series",  emoji: "🍿", label: "Watch your current series together" },
   { id: "imessage",    emoji: "📱", label: "iMessage games" },
-  { id: "dehradun",    emoji: "🏔️", label: "Share how the trip to Dehradun went!" },
+  { id: "dehradun",    emoji: "🏔️", label: "Talk about your trip to Dehradun!" },
   { id: "movie",       emoji: "🎬", label: "Watch a movie" },
   { id: "charades",    emoji: "🎭", label: "Play Charades" },
   { id: "paint",       emoji: "🎨", label: "Paint together online" },
@@ -16,9 +16,11 @@ const ACTIVITIES = [
   { id: "discord",     emoji: "🕹️", label: "Discord games" },
   { id: "reels",       emoji: "🎞️", label: "Watch Reels / YT Shorts" },
   { id: "geoguessr",   emoji: "🌍", label: "GeoGuessr" },
-  { id: "book",        emoji: "📖", label: "Book review" },
+  { id: "book",        emoji: "📖", label: "Read a book and do a book review together" },
   { id: "youtube",     emoji: "▶️",  label: "Future Canoe / Muffin Juice" },
-  { id: "gmaps",       emoji: "🗺️", label: "Random pin drop on Maps" },
+  { id: "gmaps",       emoji: "🗺️", label: "Explore the world on Google Maps" },
+  { id: "brooklyn99",  emoji: "👮", label: "Watch Brooklyn 99" },
+  { id: "wnrs",        emoji: "🃏", label: "Play We're Not Really Strangers" },
 ];
 
 const HIS_EMAIL = "ayushjodh@gmail.com";
